@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Make a Resume | JobHunt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="nav">
+        <div class="wrap">
+            <a class="logo" href="home.html" aria-label="JobHunt home"><i class="bi bi-compass"></i>JobHunt</a>
+            <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i
+                    class="bi bi-list"></i></button>
+            <nav aria-label="Main">
+                <ul class="menu" id="menu">
+                    <li><a class="active" href="home.html" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="analyzer.html">AI Analyzer</a></li>
+                    <li><a href="resume.html">Make a Resume</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a class="login" href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <h1>Resume maker</h1>
+            <p class="muted" style="margin-bottom:1rem">Type on the left. The preview updates instantly. Use Save as PDF
+                in the print window.</p>
+            <div class="builder">
+                <div class="card">
+                    <div class="form-grid">
+                        <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text">
+                        </div>
+                        <div class="field"><label for="title">Job title</label><input id="title" name="title"
+                                type="text"></div>
+                        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email">
+                        </div>
+                        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel">
+                        </div>
+                        <div class="field"><label for="address">Address</label><input id="address" name="address"
+                                type="text"></div>
+                        <div class="field"><label for="template">Template</label><select id="template">
+                                <option value="t1">Classic</option>
+                                <option value="t2">Teal bar</option>
+                                <option value="t3">Serif</option>
+                            </select></div>
+                        <div class="field full"><label for="summary">Summary</label><textarea id="summary"
+                                name="summary"></textarea></div>
+                        <div class="field full"><label for="skills">Skills (comma separated)</label><input id="skills"
+                                name="skills" type="text"></div>
+                        <div class="field full"><label for="education">Education (one per line)</label><textarea
+                                id="education" name="education"></textarea></div>
+                        <div class="field full"><label for="experience">Experience (one per line)</label><textarea
+                                id="experience" name="experience"></textarea></div>
+                        <div class="field full"><label for="projects">Projects (one per line)</label><textarea
+                                id="projects" name="projects"></textarea></div>
+                        <div class="field full"><label for="certifications">Certifications (one per
+                                line)</label><textarea id="certifications" name="certifications"></textarea></div>
+                        <div class="field full"><label for="language">Language (one per line)</label><textarea
+                                id="language" name="language"></textarea></div>
+                    </div>
+                    <div class="form-actions"><button class="btn" id="printBtn" type="button">Download PDF</button>
+                    </div>
+                </div>
+                <div class="paper t1" id="preview" aria-live="polite"></div>
+            </div>
+        </div>
+    </main>
+    <footer id="site-footer"></footer>
+    <script src="layout.js"></script>
+    <script src="resume.js"></script>
+
+</body>
+
+</html>

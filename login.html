@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login | JobHunt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="nav">
+  <div class="wrap">
+    <a class="logo" href="home.html" aria-label="JobHunt home"><i class="bi bi-compass"></i>JobHunt</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i class="bi bi-list"></i></button>
+    <nav aria-label="Main">
+      <ul class="menu" id="menu">
+        <li><a class="active" href="home.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="analyzer.html">AI Analyzer</a></li>
+        <li><a href="resume.html">Make a Resume</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a class="login" href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container"><div class="form-card">
+<h1 style="font-size:1.9rem;margin-bottom:1rem">Login or register</h1>
+<div class="tabs" role="tablist" aria-label="Account type"><button class="tab active" data-role="seeker" type="button">Job Seeker</button><button class="tab" data-role="recruiter" type="button">Recruiter</button></div>
+<div class="tabs" aria-label="Action"><button class="tab active" data-mode="login" type="button">Login</button><button class="tab" data-mode="register" type="button">Register</button></div>
+<div id="msg" class="hidden" role="alert"></div>
+
+<form id="f-login" novalidate><div class="form-grid">
+<div class="field"><label for="l_email">Email</label><input id="l_email" name="email" type="email" autocomplete="email"></div><div class="field"><label for="l_password">Password</label><input id="l_password" name="password" type="password" autocomplete="current-password"></div></div><div class="form-actions"><button class="btn" type="submit">Login</button></div></form>
+
+<form id="f-seeker" class="hidden" novalidate><div class="form-grid">
+<div class="field"><label for="s_name">Full name</label><input id="s_name" name="name" type="text" ></div><div class="field"><label for="s_phone">Mobile number</label><input id="s_phone" name="phone" type="tel" maxlength="10" inputmode="numeric"></div><div class="field"><label for="s_dob">Date of birth</label><input id="s_dob" name="dob" type="date" ></div><div class="field"><label for="s_email">Email</label><input id="s_email" name="email" type="email" ></div><div class="field"><label for="s_password">Password (min 6)</label><input id="s_password" name="password" type="password" autocomplete="new-password"></div><div class="field full"><label for="s_address">Address</label><input id="s_address" name="address" type="text" ></div><div class="field"><label for="s_locality">Locality (e.g. Kandivali, Mumbai West)</label><input id="s_locality" name="locality" type="text" ></div><div class="field"><label for="s_skills">Skills (comma separated)</label><input id="s_skills" name="skills" type="text" placeholder="Python, SQL, Git"></div>
+<div class="field full"><label for="s_education">Education</label><textarea id="s_education" name="education" ></textarea></div><div class="field full"><label for="s_projects">Projects (one per line)</label><textarea id="s_projects" name="projects" ></textarea></div><div class="field full"><label for="s_certifications">Certifications (one per line)</label><textarea id="s_certifications" name="certifications" ></textarea></div><div class="field full"><label for="s_experience">Experience (one per line)</label><textarea id="s_experience" name="experience" ></textarea></div>
+<div class="field full"><label for="s_resume">Upload resume (PDF, DOC, DOCX, TXT - max 2 MB)</label><input id="s_resume" name="resume" type="file" accept=".pdf,.doc,.docx,.txt"></div>
+</div><div class="form-actions"><button class="btn" type="submit">Submit</button></div></form>
+
+<form id="f-recruiter" class="hidden" novalidate><div class="form-grid">
+<div class="field"><label for="r_name">Recruiter name</label><input id="r_name" name="name" type="text" ></div><div class="field"><label for="r_company">Company name</label><input id="r_company" name="company" type="text" ></div><div class="field"><label for="r_email">Email</label><input id="r_email" name="email" type="email" ></div><div class="field"><label for="r_phone">Contact number</label><input id="r_phone" name="phone" type="tel" maxlength="10" inputmode="numeric"></div><div class="field"><label for="r_password">Password (min 6)</label><input id="r_password" name="password" type="password" autocomplete="new-password"></div><div class="field"><label for="r_address">Company address</label><input id="r_address" name="address" type="text" ></div>
+<div class="field"><label for="r_jobRole">Job role</label><input id="r_jobRole" name="jobRole" type="text" ></div><div class="field"><label for="r_dept">Department</label><input id="r_dept" name="dept" type="text" ></div><div class="field"><label for="r_location">Job location</label><input id="r_location" name="location" type="text" ></div><div class="field"><label for="r_salary">Salary (e.g. 4.2 LPA)</label><input id="r_salary" name="salary" type="text" ></div>
+<div class="field"><label for="r_ctc">CTC</label><input id="r_ctc" name="ctc" type="text" ></div><div class="field"><label for="r_hours">Working hours (e.g. 10:00 - 19:00)</label><input id="r_hours" name="hours" type="text" ></div><div class="field"><label for="r_days">Working days (e.g. Mon - Fri)</label><input id="r_days" name="days" type="text" ></div><div class="field"><label for="r_probation">Probation period</label><input id="r_probation" name="probation" type="text" ></div>
+<div class="field"><label for="r_mode">Work mode</label><select id="r_mode" name="mode"><option>WFO</option><option>WFH</option><option>Hybrid</option></select></div>
+<div class="field"><label for="r_bond">Contract / bond</label><input id="r_bond" name="bond" type="text" ></div><div class="field"><label for="r_vacancies">Vacancies</label><input id="r_vacancies" name="vacancies" type="number" min="1"></div><div class="field full"><label for="r_skills">Required skills (comma separated)</label><input id="r_skills" name="skills" type="text" ></div>
+</div><div class="form-actions"><button class="btn" type="submit">Register and post job</button></div></form>
+</div></main>
+<footer id="site-footer"></footer>
+<script src="layout.js"></script>
+<script src="auth.js"></script>
+
+</body>
+</html>

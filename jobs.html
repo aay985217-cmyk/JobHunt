@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jobs | JobHunt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="home.html" aria-label="JobHunt home"><i class="bi bi-compass"></i>JobHunt</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i class="bi bi-list"></i></button>
+    <nav aria-label="Main">
+      <ul class="menu" id="menu">
+        <li><a class="active" href="home.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="analyzer.html">AI Analyzer</a></li>
+        <li><a href="resume.html">Make a Resume</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a class="login" href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="section"><div class="container"><h1>Jobs</h1><p class="muted" id="matchNote"></p>
+<div class="filters">
+  <input id="q" type="search" placeholder="Search role, company, skill or location" aria-label="Search jobs">
+  <select id="modeFilter" aria-label="Work mode"><option value="">All modes</option><option>WFO</option><option>WFH</option><option>Hybrid</option></select>
+  <select id="deptFilter" aria-label="Department"><option value="">All departments</option></select>
+</div>
+<div class="grid" id="jobList"></div></div></main>
+<footer id="site-footer"></footer>
+<script src="layout.js"></script>
+<script src="data.js"></script>
+<script src="jobs.js"></script>
+
+</body>
+</html>

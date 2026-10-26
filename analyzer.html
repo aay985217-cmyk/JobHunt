@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Analyzer | JobHunt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="home.html" aria-label="JobHunt home"><i class="bi bi-compass"></i>JobHunt</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i class="bi bi-list"></i></button>
+    <nav aria-label="Main">
+      <ul class="menu" id="menu">
+        <li><a class="active" href="home.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="analyzer.html">AI Analyzer</a></li>
+        <li><a href="resume.html">Make a Resume</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a class="login" href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="section"><div class="container"><h1>Resume analyzer</h1>
+<p class="muted" style="margin-bottom:1rem">Rule-based check: finds required skills in your text and checks that key sections exist.</p>
+<div class="split" style="align-items:start">
+<div class="card">
+  <div id="err" class="hidden" role="alert"></div>
+  <div class="field"><label for="resumeText">Resume text</label><textarea id="resumeText" style="min-height:240px" placeholder="Paste your resume text here"></textarea></div>
+  <div class="field" style="margin-top:.8rem"><label for="resumeFile">Or load a .txt file</label><input id="resumeFile" type="file" accept=".txt"></div>
+  <div class="field" style="margin-top:.8rem"><label for="jobSelect">Compare with a job</label><select id="jobSelect"><option value="">Custom skills (type below)</option></select></div>
+  <div class="field" style="margin-top:.8rem"><label for="customSkills">Custom required skills</label><input id="customSkills" placeholder="Python, SQL, Git"></div>
+  <div class="form-actions"><button class="btn" id="analyzeBtn" type="button">Analyze resume</button></div>
+</div>
+<div id="result" class="hidden" aria-live="polite"></div>
+</div></div></main>
+<footer id="site-footer"></footer>
+<script src="layout.js"></script>
+<script src="data.js"></script>
+<script src="analyzer.js"></script>
+
+</body>
+</html>

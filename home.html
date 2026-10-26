@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="snap">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | JobHunt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="nav">
+        <div class="wrap">
+            <a class="logo" href="index.html" aria-label="JobHunt home"><i class="bi bi-compass"></i>JobHunt</a>
+            <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i
+                    class="bi bi-list"></i></button>
+            <nav aria-label="Main">
+                <ul class="menu" id="menu">
+                    <li><a class="active" href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="analyzer.html">AI Analyzer</a></li>
+                    <li><a href="resume.html">Make a Resume</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a class="login" href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="slide hero">
+            <div class="container split">
+                <div>
+                    <h1>Apply smarter. Fix your resume before the recruiter sees it.</h1>
+                    <p>JobHunt shows jobs that match your skills, scores your resume against the role, and lets you
+                        build a clean new one in minutes.</p>
+                    <div class="actions"><a class="btn amber" href="jobs.html">Find jobs</a><a class="btn outline"
+                            href="resume.html">Make a resume</a></div>
+                </div>
+                <aside class="hero-panel" aria-label="Sample matches">
+                    <h3 style="color:#fff">Today's matches</h3>
+                    <ul>
+                        <li><span>Python Developer</span><b>92%</b></li>
+                        <li><span>Data Analyst</span><b>75%</b></li>
+                        <li><span>QA Tester</span><b>50%</b></li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="container">
+                <h2 class="center">Three tools in one place</h2>
+                <div class="grid" style="margin-top:1.5rem">
+                    <article class="card feature"><i class="bi bi-briefcase"></i>
+                        <h3>Skill-based jobs</h3>
+                        <p>Jobs are ranked by the skills you enter at registration. Each card shows pay, bond, hours and
+                            WFO/WFH.</p>
+                    </article>
+                    <article class="card feature"><i class="bi bi-search"></i>
+                        <h3>Resume analyzer</h3>
+                        <p>Paste your resume, pick a job, and see your score and which skills are missing.</p>
+                    </article>
+                    <article class="card feature"><i class="bi bi-file-earmark-person"></i>
+                        <h3>Resume maker</h3>
+                        <p>Fill a form, watch the preview update, then save it as a PDF.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="container split">
+                <div>
+                    <h2>How it works</h2>
+                    <p>Two account types: job seekers apply, recruiters post jobs and decide.</p>
+                </div>
+                <ol class="steps">
+                    <li>Register as a Job Seeker or Recruiter.</li>
+                    <li>Seekers browse matched jobs and apply.</li>
+                    <li>Recruiters shortlist or reject, with a reason.</li>
+                    <li>Seekers track every decision on the dashboard.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="slide cta-band">
+            <div class="container">
+                <h2>Ready to start?</h2>
+                <p style="margin-bottom:1.2rem">Create your account in under two minutes.</p><a class="btn amber"
+                    href="login.html">Register now</a>
+            </div>
+        </section>
+    </main>
+    <footer id="site-footer"></footer>
+    <script src="layout.js"></script>
+
+</body>
+
+</html>
